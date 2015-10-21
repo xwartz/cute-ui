@@ -1,2 +1,2 @@
-# cutie-ui
-Cutie is a UI component framework.
+# cute-ui
+Cute is a UI component framework.
