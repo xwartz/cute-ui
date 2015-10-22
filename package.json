@@ -1,0 +1,25 @@
+{
+  "name": "cute-ui",
+  "version": "0.0.1",
+  "description": "Cute is a UI component framework.",
+  "main": "cute.js",
+  "scripts": {
+    "test": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xwartz/cute-ui.git"
+  },
+  "keywords": [
+    "cute",
+    "ui",
+    "framework",
+    "component"
+  ],
+  "author": "xwartz <stddup@gmail.com> (https://github.com/xwartz/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xwartz/cute-ui/issues"
+  },
+  "homepage": "https://github.com/xwartz/cute-ui"
+}
