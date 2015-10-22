@@ -1,0 +1,437 @@
+
+
+@mixin list-shadow($color) {
+  box-shadow: inset $list-border-width 0 0 $color;
+}
+
+
+body {
+  background: $body-bg;
+  color: $body-font-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $base-font-color-title;  
+}
+
+a,
+.link {
+  color: $base-font-color-link;
+  
+  &:visited {
+    color: $base-font-color-link;
+  }
+
+}
+
+// @for $i from 0 through 9 {
+  
+//   [l-color="#{$i}"] {
+//     @include list-shadow($l-color-#{$i})
+//   }
+// }
+
+// font-color class
+.text-def {
+  color: $base-font-color;
+}
+
+.text-primary {
+  color: $base-font-color-primary;
+}
+
+.text-secondary {
+  color: $base-font-color-secondary;
+}
+
+.text-alert {
+  color: $base-font-color-alert;
+}
+
+.text-info {
+  color: $base-font-color-info;
+}
+
+.text-info-title {
+  color: $base-font-color-info-title;
+}
+
+.text-link {
+  color: $base-font-color-link;
+}
+
+.text-active {
+  color: $base-font-color-deepbg;
+}
+
+.text-title {
+  color: $base-font-color-title;
+}
+
+.text-pro {
+  color: $orangered;
+}
+
+
+// background-color
+.bg-alert {
+  background-color: $base-alert-bg;
+}
+
+.bg-primary {
+  background-color: $base-active-bg;
+}
+
+.bg-active {
+  background-color: $base-active-bg;
+}
+
+.bg-light {
+  background-color: $base-active-light-bg;
+}
+
+// border
+.bd-divider {
+  border-color: $ashgrey !important;
+}
+
+
+.g-left {
+  background-color: $grid-left-bg;
+}
+
+.g-center {
+  background-color: $base-bg;
+}
+
+// change taskdetail background-color
+.g-right,
+#tasktitle textarea,
+#taskcontent textarea, 
+#sub-task-list, 
+#sub-task-list li,
+.out-detail {
+    background-color: $whitegray;
+}
+
+.l-divider {
+  background-color: $black1;
+}
+// toolbar
+.tool-bar {
+    .t-name {
+        color:$white;
+        opacity: 0.8;
+    }
+}
+
+// project-list
+.lists {
+
+  li > a,
+  .f-header > a,
+  .fake-li > a,
+  .l-c > a,
+  .l-new > a {
+    color: $base-font-color-deepbg;
+  }
+
+  .active > a {
+    background-color: $black2;
+  }
+
+  // sort
+  .ui-sortable-helper {
+    background-color: $grid-left-bg !important;
+    a {
+      color: $base-font-color-deepbg !important;
+      background-color: $grid-left-bg !important;
+    }
+  }
+
+  .ui-sortable-placeholder {
+    border-color: $white6;
+  }
+
+  // folder
+  .open {
+    .f-container {
+      background-color: $black05;
+    }
+  }
+
+  .l-tabs {
+    border-bottom: 1px solid $black1;
+  }
+
+}
+
+.tl-bar {
+  border-color: $ashgrey;
+}
+
+// section
+.s-line,
+.t-line.top {
+  background-color: $ashgrey;
+}
+
+.sub-task {
+  .title {
+      border-color: $ashgrey;
+  }
+
+  &.checked {
+      .title {
+        color: $lavendergray;
+      }
+  }
+}
+
+
+// task
+.task {
+  background-color: $white;
+
+  &:last-child {
+    .t-line.bottom {
+      background-color: $ashgrey;
+    }
+  }
+
+  &.selected {
+    background-color: $grey15;
+  }
+
+  &:hover,
+  &.active {
+    background-color: $ashgrey;
+  }
+
+  .t-date {
+    color: $lavendergray;
+  }
+
+  // 完成之后
+  &.checked {
+      .duedate-overdue,
+      .title {
+        color: $lavendergray;
+      }
+  }
+}
+
+.duedate-overdue {
+  color: $orangered;
+}
+
+.td-header {
+  border-color: $base-border-color;
+}
+
+// task detail
+.td-bar {
+  .td-check:after {
+    background-color: $timberwolf;
+  }
+
+}
+
+.td-footer {
+  background-color: $white;
+  border-color: $base-border-color;
+
+  input {
+    background-color: $base-bg;
+  }
+}
+
+textarea {
+  background-color: $base-bg;
+}
+
+// sub task
+.sub-task,
+.subtasks {
+  background-color: $base-bg;
+}
+
+.task-drag-hovered {
+  background-color: $ashgrey;
+
+  li,
+  .content {
+    background-color: $ashgrey;
+  }
+}
+
+.group-drag-hovered,
+.project-drag-hovered {
+  box-shadow: inset 0 0 0 1px $base-bg;
+}
+
+
+// settings 
+.settings {
+    background: $base-bg;
+
+    .tabs {
+        border-color: $base-border-color;
+    }
+
+    // 个人设置
+    .personal-panel {
+        .settings-rank {
+            .hw-panel {
+                .hw-item {
+                    .number {
+                        color: $ceruleanblue;
+                    }
+                }
+
+                // 排名颜色
+                #ranking {
+                    color: $orangered;
+                }
+            }
+        } 
+    }
+}
+
+// popup 弹出层
+.popup {
+    background: $white;
+}
+
+// 放在icon中的字  
+.inner-date {
+    color: $white;
+}
+
+// icon start
+// 底色为蓝色 中使用
+.i-1 {
+    fill: $white;
+    opacity: 0.6;
+}
+
+.active .i-1 {
+    opacity: 1;
+}
+
+.i-1-1 {
+    fill: $white;
+}
+
+// 底色为白色 中使用
+.i-2, 
+.i-2-1 {
+    fill: $manatee;
+}
+
+.active {
+    .i-2,
+    .i-2-1 {
+        fill: $indigo;
+    }
+}
+
+div.option-item:hover .i-2-1,
+div > a:hover .i-2-1, 
+li a:hover .i-2-1 {
+    fill: $indigo;
+}
+
+
+// 弹出框 选项 中使用
+.i-3, 
+.i-3-1 {
+    fill: $darkgrey;
+}
+
+.active, 
+.selected-item {
+    .i-3, 
+    .i-3-1{
+        fill: $indigo;
+    }
+}
+
+div.option-item:hover .i-3,
+div > a:hover .i-3, 
+li a:hover .i-3 {
+    fill: $white;
+}
+
+
+// 不变色icon
+.i-4 {
+    fill: $lavendergray;
+    color: $lavendergray;
+}
+
+// 填充icon的变色方案
+.i-5,
+.i-6 {
+    fill: $lavendergray;
+    color: $lavendergray;
+}
+
+.active .i-5 {
+    fill: $indigo;
+    color: $indigo;
+}
+
+.duedate-overdue .i-5{
+    fill: $orangered;
+    color: $orangered;
+}
+
+div > a:hover .i-5, 
+li a:hover .i-5 {
+    fill: $indigo;
+}
+
+.active > .i-6 {
+    fill: $indigo;
+    color: $indigo;
+}
+
+a:hover > .i-6 {
+    fill: $indigo;
+}
+
+
+// priority color
+.priority-low {
+    fill: $priority-low;
+}
+
+.priority-medium {
+    fill: $priority-medium;
+}
+
+.priority-high {
+    fill: $priority-high;
+}
+// icon end
+
+
+// sort
+.tasks,
+.subtasks {
+  .ui-sortable-helper {
+    border-color: $base-border-color;
+  }
+
+  .ui-sortable-placeholder {
+    background-color: $steelblue !important;
+  }
+}
+
+// 显示更多task
+.show-more,
+.tl-loading {
+    border-top-color: $ashgrey;
+    color: $indigo;
+}

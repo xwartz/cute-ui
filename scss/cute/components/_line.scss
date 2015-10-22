@@ -1,0 +1,10 @@
+// 同一行两元素宽度自适应
+.line-right,
+.line-left {
+  position: relative;
+}
+
+.line-right {
+  z-index: 1;
+  float: right;
+}

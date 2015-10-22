@@ -1,0 +1,65 @@
+/* 定义一些全局的 class */
+
+
+/* 大小规则 .xx-tny, .xx-sml, .xx-med, .xx-lrg
+ *
+ * button: .btn-tny 26, .btn-sml 30, .btn-med 36, .btn-lrg
+ * text: .text-tny 12, .text-sml 13, .text-med 16, .text-lrg 22
+ * icon tny 14 sml 18 med 32 lrg 40
+ * line: .line-sml 8
+ */
+
+// font-size class
+.text-tny {
+  font-size: $base-font-size-tny;
+}
+
+.text-sml {
+  font-size: $base-font-size-sml;
+}
+
+.text-def {
+  font-size: $base-font-size-def;
+}
+
+.text-med {
+  font-size: $base-font-size-med;
+}
+
+.text-lrg {
+  font-size: $base-font-size-lrg;
+}
+
+
+.left { float: left; }
+.right { float: right; }
+.clearfix { @include clearfix; }
+
+.hide,
+.hidden {
+  display: none ;
+}
+
+.invisible { 
+  visibility: hidden; 
+}
+
+// Font smoothing
+// Antialiased font smoothing works best for light text on a dark background.
+// Apply to single elements instead of globally to body.
+// Note this only applies to webkit-based desktop browsers and Firefox 25 (and later) on the Mac.
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+}
+
+.shadow {
+  border: $base-border;
+  box-shadow: $base-box-shadow;
+  border-radius: $base-border-radius;
+}

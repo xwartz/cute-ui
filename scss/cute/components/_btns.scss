@@ -1,0 +1,18 @@
+// buttons 切换显示
+.btns {
+
+  .btn-loading {
+    display: none;
+  }
+
+  &.ing {
+    .btn-initial {
+      display: none;
+    }
+
+    .btn-loading {
+        display: inline-block;
+    }
+  }
+
+}

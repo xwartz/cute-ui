@@ -1,0 +1,8 @@
+
+[class*="l-tab-pane"] {
+  display: none;
+}
+
+.t-active[class*="l-tab-pane"] {
+    display: block;
+}

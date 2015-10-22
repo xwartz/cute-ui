@@ -1,0 +1,90 @@
+// popup
+
+.popup {
+    width: rem-calc(610);
+    min-height: rem-calc(180);
+    display: inline-block;
+    border: $base-border;
+    border-radius: $base-border-radius;
+    box-shadow: $base-pop-shadow;
+    padding: rem-calc(24) rem-calc(24) rem-calc(10) rem-calc(24);
+    text-align: left;
+    position: relative;
+    top: 19%;
+
+    > div {
+        position: relative;
+    }
+    
+    .popup-header {
+        padding-bottom: rem-calc(18);
+        height: rem-calc(40);
+
+        .popup-title {
+            line-height: rem-calc(22); 
+        }
+
+        .popup-close {
+            position: absolute;
+            right: 0;
+            font-size: rem-calc(24);
+            line-height: rem-calc(24);
+            color: $darkgrey;
+        }
+
+    }
+
+    .popup-body {
+        padding-top: rem-calc(10);
+        padding-bottom: rem-calc(10);
+    }
+
+    .popup-footer {
+        padding-top: rem-calc(18);
+        padding-bottom: rem-calc(18); 
+
+        float: right;
+        button, .btn{
+            margin-left: rem-calc(12); 
+        }
+    }
+
+    .modal {
+        .popup-body {
+            margin-bottom: rem-calc(56);
+        }
+    }
+}
+
+.popup-cover {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: $zindex-modal;
+    text-align: center;
+}
+
+.upgrade-pop {
+    .popup-body,
+    .popup-footer {
+        float: none;
+        text-align: center;
+    }
+
+    .popup-title {
+        margin-top: rem-calc(10);
+        margin-bottom: rem-calc(20);
+    }
+
+    .popup-footer {
+        padding-top: rem-calc(45);
+        padding-bottom: rem-calc(45);
+    }
+}
+
+@media #{$popup-low} {
+    .popup {
+        width: 95%;
+    }
+}

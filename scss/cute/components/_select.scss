@@ -1,0 +1,85 @@
+
+$select-w: rem-calc(288);
+$select-h: rem-calc(30);
+$select-max-h: rem-calc(400);
+$select-padding: 0 rem-calc(12);
+
+
+.select-menu {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  
+  .select-title,
+  .option-item {
+    @include ellipsis();
+    @include liheight($select-h);
+    padding: $select-padding;
+  }
+
+  .select-title {
+    line-height: rem-calc(28);
+  }
+
+  .select-title,
+  .select-list {
+    border: $base-border-style;
+    border-color: $base-border-color;
+    background-color: $base-bg;
+    border-radius: $base-border-radius;
+    cursor: pointer;
+  }
+
+  .option-item {
+
+    &.selected-item {
+      color: $base-active-bg
+    }
+    &:hover {
+      color: $base-font-color-deepbg;
+      background-color: $base-active-bg;
+    }
+  }
+
+  .select-list {
+    display: none;
+    padding: $base-list-padding;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    margin-top: 5px;
+    max-height: $select-max-h;
+    overflow: auto;
+    box-shadow: $base-box-shadow;
+  }
+
+  .select-arrow {
+    color: $base-font-color-info;
+    @include liheight($select-h);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $select-h;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &.open .select-list {
+    display: block;
+  }
+
+  .antiscroll-inner {
+      position: relative;
+  }
+
+  .menu-ul {
+      position: absolute;
+  }
+
+  .antiscroll-scrollbar {
+      z-index: 1000;
+      margin-left: rem-calc(-2);
+  }
+
+}

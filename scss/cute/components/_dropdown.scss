@@ -1,0 +1,358 @@
+//
+// Dropdown menus
+// --------------------------------------------------
+
+//** Width of the `border` for generating carets that indicator dropdowns.
+$caret-width-base:          4px !default;
+
+//** Background for the dropdown menu.
+$dropdown-bg:                    $body-bg !default;
+//** Dropdown menu `border-color`.
+$dropdown-border:                $base-border-color !default;
+
+//** Divider color for between dropdown items.
+$dropdown-divider-bg:            $base-divider-bg !default;
+
+$dropdown-default-color:         $base-font-color-primary !default;
+
+//** Hover color for dropdown links.
+$dropdown-link-hover-color:      $base-font-color-deepbg !default;
+//** Hover background for dropdown links.
+$dropdown-link-hover-bg:         $base-active-bg !default;
+
+//** Active dropdown menu item text color.
+$dropdown-link-active-color:     $base-font-color-deepbg !default;
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg:        $base-active-bg !default;
+
+//** Disabled dropdown menu item background color.
+$dropdown-link-disabled-color:   $disabled !default;
+
+// drop menu list
+$drop-item-height: rem-calc(32);
+$drop-item-max-width: rem-calc(186);
+$drop-item-min-width: rem-calc(110);
+$drop-item-padding: 0 rem-calc(18);
+$drop-item-tny-padding: 0 rem-calc(10);
+// 只有icon
+$drop-item-icon-only-padding: 0 rem-calc(10);
+
+$drop-list-max-height: $drop-item-height * 8 + $base-list-padding-t-b * 2 + rem-calc(2); // 2px border
+
+$drop-item-icon-margin-left: 0;
+$drop-item-icon-margin-right: rem-calc(6);
+
+// font size 
+$drop-item-font-size: rem-calc(13);
+
+
+
+
+// Dropdown arrow/caret
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top:   $caret-width-base dashed;
+  border-top:   $caret-width-base solid \9; // IE8
+  border-right: $caret-width-base solid transparent;
+  border-left:  $caret-width-base solid transparent;
+}
+
+// The dropdown wrapper (div)
+.dropup,
+.dropdown {
+  position: relative;
+}
+
+// Prevent the focus on the dropdown toggle when closing dropdowns
+.dropdown-toggle:focus {
+  outline: 0;
+}
+
+// The dropdown menu (ul)
+.dropdown-menu {
+  display: none; // none by default, but block on "open" of the menu
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $zindex-dropdown;
+  float: left;
+  max-height: $drop-list-max-height;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: $base-list-padding-t-b 0;
+  list-style: none;
+  text-align: left;
+  background-color: $dropdown-bg;
+  border: 1px solid $dropdown-border;
+  border-radius: $base-border-radius;
+  box-shadow: $base-box-shadow;
+
+  // Aligns the dropdown menu to right
+  &.pull-right {
+    right: 0;
+    left: auto;
+  }
+
+  // Dividers (basically an hr) within the dropdown
+  .divider {
+    height: 1px;
+    margin: $base-list-padding-t-b 0;
+    overflow: hidden;
+    background-color: $dropdown-divider-bg;
+  }
+
+  // Links within the dropdown menu
+   li > a {
+    position: relative;
+    display: block;
+    padding: $drop-item-padding;
+    clear: both;
+    font-weight: normal;
+    @include liheight($drop-item-height);
+    @include ellipsis();
+    max-width: $drop-item-max-width;
+    min-width: $drop-item-min-width;
+    color: $dropdown-default-color;
+    font-size: $drop-item-font-size;
+  }
+
+  &.dropdown-tny {
+     li > a {
+        min-width:initial;
+        min-width: auto;
+        padding: $drop-item-tny-padding;
+    }
+  }
+
+  // icon-text-icon
+  &.i-text-i {
+     li > a {
+        max-width: rem-calc(280);
+        min-width: rem-calc(216);
+        padding-left: rem-calc(12);
+        padding-right: rem-calc(24);
+    }
+  }
+
+  // icon-text
+  &.i-text {
+     li > a {
+        padding-left: rem-calc(12);
+        padding-right: rem-calc(24);
+    }
+  }
+
+  &.dropdown-group {
+     li > a {
+        padding-right: rem-calc(40);
+    } 
+  }
+
+  [class^="icon-"],
+  [class*=" icon-"] {
+    margin-left: $drop-item-icon-margin-left;
+    margin-right: $drop-item-icon-margin-right;
+    margin-bottom: rem-calc(4);
+  }
+
+  &.icononly {
+     li > a {
+      padding: $drop-item-icon-only-padding;
+
+      [class^="icon-"],
+      [class*=" icon-"] {
+        margin: 0;
+        margin-bottom: rem-calc(3);
+      }
+    }
+
+    left: rem-calc(-11);
+  }
+
+  .direct {
+    width: $small-icon-size;
+    height: $small-icon-size;
+    right: rem-calc(10);
+    top: rem-calc(10);
+  }
+}
+
+// Active state
+.dropdown-menu .active > a {
+  & {
+    text-decoration: none;
+    outline: 0;
+    color: $dropdown-link-active-bg;
+  }
+
+    .text-primary,
+    .text-secondary,
+    strong {
+        color: $dropdown-link-active-bg;
+    }
+}
+
+// Hover/Focus state
+.dropdown-menu li > a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $dropdown-link-hover-color;
+    background-color: $dropdown-link-hover-bg;
+
+  }
+
+  &:hover,
+  &:focus {
+    .text-primary,
+    .text-secondary,
+    strong {
+        text-decoration: none;
+        color: $dropdown-link-hover-color;
+        background-color: $dropdown-link-hover-bg;
+    }
+  }
+}
+
+// Disabled state
+//
+// Gray out text and ensure the hover/focus state remains gray
+
+.dropdown-menu .disabled > a {
+  &,
+  &:hover,
+  &:focus {
+    color: $dropdown-link-disabled-color;
+  }
+
+  // Nuke hover/focus effects
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: transparent;
+    background-image: none; // Remove CSS gradient
+    cursor: $cursor-disabled-value;
+  }
+}
+
+// Open state for the dropdown
+.open {
+  // Show the menu
+  .dropdown-menu {
+    display: block;
+  }
+
+  // Remove the outline when :focus is triggered
+  > a {
+    outline: 0;
+  }
+}
+
+// Menu positioning
+//
+// Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
+// menu with the parent.
+.dropdown-menu-right {
+  left: auto; // Reset the default from `.dropdown-menu`
+  right: 0;
+}
+// With v3, we enabled auto-flipping if you have a dropdown within a right
+// aligned nav component. To enable the undoing of that, we provide an override
+// to restore the default dropdown menu alignment.
+//
+// This is only for left-aligning a dropdown menu within a `.navbar-right` or
+// `.pull-right` nav component.
+.dropdown-menu-left {
+  left: 0;
+  right: auto;
+}
+
+// Dropdown section headers
+.dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  line-height: $li-line-height;
+  white-space: nowrap; // as with > li > a
+}
+
+// Backdrop to catch body clicks on mobile, etc.
+.dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: ($zindex-dropdown - 10);
+}
+
+// Right aligned dropdowns
+.pull-right .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+// Allow for dropdowns to go bottom up (aka, dropup-menu)
+//
+// Just add .dropup after the standard .dropdown class and you're set, bro.
+
+.dropup {
+  // Reverse the caret
+  .caret {
+    border-top: 0;
+    border-bottom: $caret-width-base dashed;
+    border-bottom: $caret-width-base solid \9; // IE8
+    content: "";
+  }
+  // Different positioning for bottom up menu
+  .dropdown-menu {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 8px;
+  }
+}
+
+// 有箭头的时候整体向下移动
+.dropdown {
+    .boult ~ .dropdown-menu,
+    .boult ~ .menu-ul {
+        top: calc(100% + 8px);
+        &.pull-right {
+            right: rem-calc(-15);
+        }
+        &.pull-left {
+            left: rem-calc(-10);
+        }
+    }
+}
+
+/** dirty fix **/
+.dropdown-menu strong {
+  color: inherit;
+  font-weight: normal;
+}
+
+.menu-ul {
+    position: absolute;
+    .dropdown-menu {
+        position: relative;
+        overflow: hidden;
+        ul {
+          max-height: $drop-list-max-height - rem-calc(12);
+        }
+    }
+
+    .groups-ul {
+        position: absolute;
+        bottom: auto;
+    }
+
+    .antiscroll-scrollbar-vertical {
+      margin-top: $base-list-padding-t-b;
+    }
+    
+}
+/** /dirty fix **/

@@ -1,0 +1,26 @@
+.avatar {
+  width: $avatar-size;
+  height: $avatar-size;
+  border: none;
+  overflow: hidden;
+
+  &.sml {
+    width: $avatar-size-sml;
+    height: $avatar-size-sml;
+  }
+
+  &.med {
+    width: rem-calc(24);
+    height: rem-calc(24);
+  }
+
+  &.lrg {
+    width: $avatar-size-lrg;
+    height: $avatar-size-lrg;
+  }
+
+  &.round {
+    border-radius: 50%;
+  }
+
+}
