@@ -2,43 +2,43 @@
 
 // variables
 @import 
-  'utils/variables';
+  'cute/utils/variables';
 
 // base
 @import 
-  'base/reset',
-  'base/type',
-  'base/global';
+  'cute/base/reset',
+  'cute/base/type',
+  'cute/base/global';
 
 // components
 @import
-  'components/animation',
-  'components/avatar',
-  'components/btns',
-  'components/button',
-  'components/calendar',
-  'components/cursor',
-  'components/direct',
-  'components/dropdown',
-  'components/fake-icon',
-  'components/input',
-  'components/line',
-  'components/loading',
-  'components/multi-select',
-  'components/popup',
-  'components/scrollbar',
-  'components/select',
-  'components/squares-menu',
-  'components/switch',
-  'components/tab';
+  'cute/components/animation',
+  'cute/components/avatar',
+  'cute/components/btns',
+  'cute/components/button',
+  'cute/components/calendar',
+  'cute/components/cursor',
+  'cute/components/direct',
+  'cute/components/dropdown',
+  'cute/components/fake-icon',
+  'cute/components/input',
+  'cute/components/line',
+  'cute/components/loading',
+  'cute/components/multi-select',
+  'cute/components/popup',
+  'cute/components/scrollbar',
+  'cute/components/select',
+  'cute/components/squares-menu',
+  'cute/components/switch',
+  'cute/components/tab';
 
 
 // layout
 // @import 
-//   'layout/grid',
-//   'layout/toolbar',
-//   'layout/media';
+//   'cute/layout/grid',
+//   'cute/layout/toolbar',
+//   'cute/layout/media';
 
 // themes
 @import 
-  'themes/default';
+  'cute/themes/default';
