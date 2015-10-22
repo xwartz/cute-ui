@@ -1,4 +1,5 @@
-//
+// based on Foundation
+
 // Dropdown menus
 // --------------------------------------------------
 
@@ -159,7 +160,7 @@ $drop-item-font-size: rem-calc(13);
     margin-bottom: rem-calc(4);
   }
 
-  &.icononly {
+  &.icon-only {
      li > a {
       padding: $drop-item-icon-only-padding;
 
@@ -304,9 +305,9 @@ $drop-item-font-size: rem-calc(13);
   .caret {
     border-top: 0;
     border-bottom: $caret-width-base dashed;
-    border-bottom: $caret-width-base solid \9; // IE8
     content: "";
   }
+
   // Different positioning for bottom up menu
   .dropdown-menu {
     top: auto;
@@ -314,45 +315,3 @@ $drop-item-font-size: rem-calc(13);
     margin-bottom: 8px;
   }
 }
-
-// 有箭头的时候整体向下移动
-.dropdown {
-    .boult ~ .dropdown-menu,
-    .boult ~ .menu-ul {
-        top: calc(100% + 8px);
-        &.pull-right {
-            right: rem-calc(-15);
-        }
-        &.pull-left {
-            left: rem-calc(-10);
-        }
-    }
-}
-
-/** dirty fix **/
-.dropdown-menu strong {
-  color: inherit;
-  font-weight: normal;
-}
-
-.menu-ul {
-    position: absolute;
-    .dropdown-menu {
-        position: relative;
-        overflow: hidden;
-        ul {
-          max-height: $drop-list-max-height - rem-calc(12);
-        }
-    }
-
-    .groups-ul {
-        position: absolute;
-        bottom: auto;
-    }
-
-    .antiscroll-scrollbar-vertical {
-      margin-top: $base-list-padding-t-b;
-    }
-    
-}
-/** /dirty fix **/
