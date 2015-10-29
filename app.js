@@ -10,6 +10,9 @@ hbs.registerPartials(__dirname + '/views');
 // 设置 view 路径
 app.set('views', __dirname + '/views');
 
+// GET /style.css etc
+app.use(express.static(__dirname + '/public'));
+
 app.get('/', function (req, res) {
   res.render('index')
 });

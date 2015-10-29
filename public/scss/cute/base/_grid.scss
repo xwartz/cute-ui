@@ -1,0 +1,39 @@
+$section-width: 80%;
+$row-padding: rem-calc(10) 0;
+
+$col-width: 100%;
+$col-2-width: 50%;
+$col-3-width: 33%;
+$col-4-width: 25%;
+$col-5-width: 20%;
+
+.section {
+    width: $section-width;
+    margin: auto;
+}
+
+.row {
+    padding: $row-padding;
+    display: block;
+}
+
+.col {
+    float: left;
+    width: $col-width;
+
+    &.col-2 {
+        width: $col-2-width;
+    }
+
+    &.col-3 {
+        width: $col-3-width;
+    }
+
+    &.col-4 {
+        width: $col-4-width;
+    }
+
+    &.col-5 {
+        width: $col-5-width;
+    }
+}

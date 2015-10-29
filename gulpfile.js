@@ -5,12 +5,12 @@ var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 
 var dirs = {
-  styles : './scss',
-  dest : './dist'
+  styles : './public/scss',
+  dest : './public/dist'
 };
 
 gulp.task('watch', function() {
-  gulp.watch(dirs.styles + '/**/*.scss', ['styles'])
+  gulp.watch(dirs.styles + '/**/*', ['styles'])
 });
 
 gulp.task('styles', function() {
