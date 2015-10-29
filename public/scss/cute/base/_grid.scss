@@ -1,4 +1,6 @@
-$section-width: 80%;
+$c-width: 80%;
+
+$section-padding: rem-calc(20);
 $row-padding: rem-calc(10) 0;
 
 $col-width: 100%;
@@ -7,9 +9,13 @@ $col-3-width: 33%;
 $col-4-width: 25%;
 $col-5-width: 20%;
 
-.section {
-    width: $section-width;
+.container {
+    width: $c-width;
     margin: auto;
+}
+
+.section {
+    padding: $section-padding;
 }
 
 .row {

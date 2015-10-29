@@ -93,6 +93,8 @@ input {
   &.input-alert,
   &.input-error { @include input-style($bd-color:$alert-input-border-color, $focus-bd-color:$alert-input-focus-border-color); }
 
+  &.disabled, &[disabled] { @include input-style($bd-color:$input-border-color, $focus-bd-color:$input-focus-border-color, $disabled:true); }
+
 }
 
 input[type="submit"] {

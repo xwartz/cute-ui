@@ -172,9 +172,12 @@ input,
 textarea {
   font-family: "Microsoft Yahei", "微软雅黑", STXihei, "Hiragino Sans GB", "Meiryo UI", Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro", "Arial Unicode MS", Helvetica, "Helvetica Neue", Arial, sans-serif; }
 
-.section {
+.container {
   width: 80%;
   margin: auto; }
+
+.section {
+  padding: 1.25rem; }
 
 .row {
   padding: 0.625rem 0;
@@ -247,32 +250,6 @@ textarea {
   border: 1px solid #ececec;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem; }
-
-.avatar {
-  width: 2.25rem;
-  height: 2.25rem;
-  border: none;
-  overflow: hidden; }
-  .avatar.sml {
-    width: 1rem;
-    height: 1rem; }
-  .avatar.med {
-    width: 1.5rem;
-    height: 1.5rem; }
-  .avatar.lrg {
-    width: 3.75rem;
-    height: 3.75rem; }
-  .avatar.round {
-    border-radius: 50%; }
-
-.btns .btn-loading {
-  display: none; }
-
-.btns.ing .btn-initial {
-  display: none; }
-
-.btns.ing .btn-loading {
-  display: inline-block; }
 
 button, .button, .btn {
   -webkit-appearance: none;
@@ -373,6 +350,136 @@ button, .button, .btn {
 button::-moz-focus-inner {
   border: 0;
   padding: 0; }
+
+::-webkit-input-placeholder {
+  color: #c7c7c7; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #c7c7c7; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #c7c7c7; }
+
+:-ms-input-placeholder {
+  color: #c7c7c7 !important; }
+
+input {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border: 1px solid;
+  outline: 0;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  height: 2rem;
+  border-color: #ddd; }
+  input.focus, input:focus {
+    outline: 0;
+    border-color: #617fde; }
+  input.input-tny {
+    height: 1.75rem; }
+  input.input-sml {
+    height: 1.875rem; }
+  input.input-med {
+    height: 2rem; }
+  input.input-lrg {
+    height: 2.25rem; }
+  input.input-alert, input.input-error {
+    border-color: #ff3180; }
+    input.input-alert.focus, input.input-alert:focus, input.input-error.focus, input.input-error:focus {
+      outline: 0;
+      border-color: #ff3180; }
+  input.disabled, input[disabled] {
+    border-color: #ddd;
+    cursor: default; }
+    input.disabled.focus, input.disabled:focus, input[disabled].focus, input[disabled]:focus {
+      outline: 0;
+      border-color: #617fde; }
+    input.disabled:focus, input[disabled]:focus {
+      border-color: #ddd; }
+
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0; }
+
+/* Respect enforced amount of rows for textarea */
+textarea[rows] {
+  height: auto; }
+
+/* Not allow resize out of parent */
+textarea {
+  max-width: 100%; }
+
+textarea.input-fake {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border: 1px solid;
+  outline: 0;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  border-color: #ddd;
+  padding-top: 0.4375rem;
+  padding-bottom: 0.4375rem; }
+  textarea.input-fake.focus, textarea.input-fake:focus {
+    outline: 0;
+    border-color: #617fde; }
+
+/* Adjust margin for form elements below */
+input[type="checkbox"],
+input[type="radio"],
+select {
+  margin: 0 0 1rem 0;
+  height: auto; }
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+  line-height: 1; }
+
+/* Normalize file input */
+input[type="file"] {
+  width: 1000px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -400px;
+  opacity: 0;
+  padding: 0;
+  cursor: pointer;
+  -ms-filter: 'alpha(opacity=0)'; }
+
+.ios input, .ios textarea, .ios select {
+  -webkit-appearance: none; }
+
+.avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  overflow: hidden; }
+  .avatar.sml {
+    width: 1rem;
+    height: 1rem; }
+  .avatar.med {
+    width: 1.5rem;
+    height: 1.5rem; }
+  .avatar.lrg {
+    width: 3.75rem;
+    height: 3.75rem; }
+  .avatar.round {
+    border-radius: 50%; }
+
+.btns .btn-loading {
+  display: none; }
+
+.btns.ing .btn-initial {
+  display: none; }
+
+.btns.ing .btn-loading {
+  display: inline-block; }
 
 .kalendae:before, .kalendae:after {
   content: " ";
@@ -757,102 +864,6 @@ input[disabled] {
   top: auto;
   bottom: 100%;
   margin-bottom: 8px; }
-
-::-webkit-input-placeholder {
-  color: #c7c7c7; }
-
-:-moz-placeholder {
-  /* Firefox 18- */
-  color: #c7c7c7; }
-
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #c7c7c7; }
-
-:-ms-input-placeholder {
-  color: #c7c7c7 !important; }
-
-input {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  border: 1px solid;
-  outline: 0;
-  border-radius: 2px;
-  font-size: 0.875rem;
-  height: 2rem;
-  border-color: #ddd; }
-  input.focus, input:focus {
-    outline: 0;
-    border-color: #617fde; }
-  input.input-tny {
-    height: 1.75rem; }
-  input.input-sml {
-    height: 1.875rem; }
-  input.input-med {
-    height: 2rem; }
-  input.input-lrg {
-    height: 2.25rem; }
-  input.input-alert, input.input-error {
-    border-color: #ff3180; }
-    input.input-alert.focus, input.input-alert:focus, input.input-error.focus, input.input-error:focus {
-      outline: 0;
-      border-color: #ff3180; }
-
-input[type="submit"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 0; }
-
-/* Respect enforced amount of rows for textarea */
-textarea[rows] {
-  height: auto; }
-
-/* Not allow resize out of parent */
-textarea {
-  max-width: 100%; }
-
-textarea.input-fake {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  border: 1px solid;
-  outline: 0;
-  border-radius: 2px;
-  font-size: 0.875rem;
-  border-color: #ddd;
-  padding-top: 0.4375rem;
-  padding-bottom: 0.4375rem; }
-  textarea.input-fake.focus, textarea.input-fake:focus {
-    outline: 0;
-    border-color: #617fde; }
-
-/* Adjust margin for form elements below */
-input[type="checkbox"],
-input[type="radio"],
-select {
-  margin: 0 0 1rem 0;
-  height: auto; }
-
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-  display: inline-block;
-  margin-left: 0.5rem;
-  margin-bottom: 0;
-  line-height: 1; }
-
-/* Normalize file input */
-input[type="file"] {
-  width: 1000px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -400px;
-  opacity: 0;
-  padding: 0;
-  cursor: pointer;
-  -ms-filter: 'alpha(opacity=0)'; }
-
-.ios input, .ios textarea, .ios select {
-  -webkit-appearance: none; }
 
 .line-right,
 .line-left {
