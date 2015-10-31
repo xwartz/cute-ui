@@ -1,0 +1,8 @@
+{
+  "web-port": 8081,
+  "debug-port": 5858,
+  "save-live-edit": true,
+  "preload": false,
+  "hidden": ["node_modules/"],
+  "nodejs": ["--harmony"]
+}
