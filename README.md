@@ -15,7 +15,7 @@ Cute is a UI component framework.
 
 4. `gulp watch`
 
-5. `pm2 start app --watch`
+5. `npm start`
 
 ## 目录说明
 
@@ -28,3 +28,4 @@ Cute is a UI component framework.
 ## 目前状态
 
 Building...
+https://xwartz.github.com/cute-ui/
