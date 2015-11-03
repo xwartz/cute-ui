@@ -1,0 +1,126 @@
+// @import 'components/calendae';
+
+$tc-width: rem-calc(270);
+$tc-padding:  rem-calc(24);
+
+$tc-bg: $base-bg;
+$tc-base-font-color: $base-font-color;
+$tc-today-font-color: $indigo;
+$tc-active-font-color: $indigo;
+$tc-disabled-font-color: $base-font-color-info;
+$tc-hover-font-color: $base-font-color-deepbg;
+$tc-hover-bg: $base-active-bg;
+$tc-active-bg: $tc-bg;
+$tc-active-border-color: $base-focus-border-color;
+$tc-today-bg-color: $opacityindigo;
+
+$tc-divider-margin: rem-calc(10);
+
+$tc-line-divider: rem-calc(8);
+
+.kalendae {
+    font-size: $base-font-size-sml;
+    color: $base-font-color-secondary;
+    width: $tc-width;
+
+    .k-calendar,
+    a {
+      color: $tc-base-font-color;
+    }
+
+    .k-calendar {
+      
+      .k-out-of-month,
+      .disable {
+        color: $tc-disabled-font-color;
+      }
+
+      .k-prev, .k-next,
+      .year a,
+      .nav-toggle,
+      .k-header {
+        color: $base-font-color-secondary;
+      }
+
+      .year .active a {
+        color: $tc-active-font-color;
+      }
+
+      .k-today {
+        color: $tc-today-font-color;
+        &:after {
+          background-color: $tc-today-bg-color;
+        }
+      }
+
+      .month {
+        a:not(.disable) {
+
+          &:hover {
+            color: $tc-hover-font-color;
+            background-color: $tc-hover-bg;
+          }
+
+          &:active {
+            color: $tc-base-font-color;
+            background-color: $tc-active-bg;
+            border-color: $tc-active-border-color;
+          }
+
+          &.k-selected {
+            color: $tc-base-font-color;
+            background-color: $tc-active-bg;
+            border-color: $tc-active-border-color;
+
+            &:hover {
+              color: $tc-hover-font-color;
+              background-color: $tc-hover-bg;
+            }
+            
+          }
+
+        }
+        
+      }
+
+      .k-days span {
+        &:hover {
+          color: $tc-hover-font-color;
+          &:after {
+            background-color: $tc-hover-bg;
+          }
+        }
+
+        &:active {
+          color: $tc-base-font-color;
+          &:after {
+            background-color: $tc-active-bg;
+            border-color: $tc-active-border-color;
+          }
+        }
+
+        &.k-selected {
+          color: $tc-base-font-color;
+          &:after {
+            background-color: $tc-active-bg;
+            border-color: $tc-active-border-color;
+          }
+
+          &.k-today {
+            &:after {
+              background-color: $tc-today-bg-color;
+            }
+          }
+
+          &:hover {
+            color: $tc-hover-font-color;
+            &:after {
+              background-color: $tc-hover-bg; 
+            }
+          }
+          
+        }
+      }
+
+    }
+  }
