@@ -37,7 +37,7 @@ $base-font-color: $bistre; // 333 正常
 $base-font-color-primary: $bistre; //333 重要
 $base-font-color-secondary: $darkgrey; // 737373 次要
 $base-font-color-alert: $red; //  f15964 警告 提醒
-$base-font-color-info: $lavendergray; //c7c7c7 消息信息
+$base-font-color-info: $manatee; //aaa 消息信息
 $base-font-color-link: $indigo; 
 $base-font-color-deepbg: $white; // fff 白色
 $base-font-color-title: $indigo; 
@@ -47,7 +47,8 @@ $base-font-color-info-title: $manatee; // aaa
 $base-font-color-holder: $lavendergray;// c7c7c7 
 
 
-$font-family: -apple-system,".SFNSText-Regular","Roboto","Segoe UI","Oxygen","Ubuntu","Cantarell","Helvetica Neue",sans-serif;
+$font-family: -apple-system,".SFNSText-Regular","Roboto","Segoe UI","Oxygen","Ubuntu","Cantarell","Microsoft Yahei","微软雅黑","Helvetica Neue","メイリオ","ＭＳ Ｐゴシック",Arial,sans-serif;
+
 
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;

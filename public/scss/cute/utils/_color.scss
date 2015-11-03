@@ -20,8 +20,10 @@ $lightorange: #ffab3c;
 $lightgrayishblue: rgba(97, 127, 222, 0.2);
 $grayishblue: #eff2fb;
 
-// task-detail background
+
 $whitegray: #fdfdfd;
+
+$vwhitegray: #fcfcfc;
 
 $pink: #e86499;
 $tuftsblue: #8ea0cb;
@@ -51,6 +53,11 @@ $whitelilac: #ebebeb;
 
 $disabled: #a8a8a8;
 
+$verylightgray: #fefefe;
+
+$lightwhite: #fafafa;
+
+$white4: rgba(225,225,225,0.4);
 $white6: rgba(225,225,225,0.6);
 $white8: rgba(225,225,225,0.8);
 
@@ -75,9 +82,9 @@ $l-color-8: #F3BB4C;
 $l-color-9: #FFE954;
 
 // priority color
-$priority-high: #fd5d5f;
-$priority-medium: #f6a737;
-$priority-low: #3ad69d;
+$priority-high: #ff3180;
+$priority-medium: #ffc817;
+$priority-low: #617fde;
 
 
 
@@ -92,3 +99,6 @@ $lightgray: rgba(0, 0, 0, 0.15);
 
 $blackwhite: #d3dbf3;
 $blackblue: #5a7bcf;
+
+$opacityindigo: rgba(97,127,222,0.1);
+$opacitywhite: rgba(255,255,255,0.3);

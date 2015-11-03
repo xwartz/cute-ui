@@ -4,7 +4,9 @@
   "description": "Cute is a UI component framework.",
   "main": "cute.js",
   "scripts": {
-    "test": "gulp build"
+    "start": "pm2 start app --watch",
+    "restart": "pm2 restart app",
+    "build": "gulp styles"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
   "devDependencies": {
     "express": "~4.13.3",
     "gulp-autoprefixer": "~3.1.0",
+    "gulp-notify": "^2.2.0",
     "gulp-plumber": "~1.0.1",
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "~1.6.0",
