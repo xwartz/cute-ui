@@ -1,5 +1,3 @@
-// calendar
-
 
 $k-span-border-width: rem-calc(1);
 
@@ -179,7 +177,7 @@ $k-nav-margin-bottom: rem-calc(13);
     }
 
     .nav-toggle {
-      width: 80%;
+      width: 70%;
       margin: 0 auto;
       float: none;
       height: $k-nav-size;
@@ -188,7 +186,7 @@ $k-nav-margin-bottom: rem-calc(13);
 
       span {
         float: none;
-        display: inline;
+        display: inline-block;
         line-height: 1;
         vertical-align: top;
 
