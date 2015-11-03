@@ -6,6 +6,7 @@
   "scripts": {
     "start": "pm2 start app --watch",
     "restart": "pm2 restart app",
+    "stop": "pm2 stop app",
     "build": "gulp styles"
   },
   "repository": {
